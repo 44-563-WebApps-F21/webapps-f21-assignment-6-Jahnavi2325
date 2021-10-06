@@ -45,6 +45,32 @@
         
             }
         }
+        let usingImage = 1;
+
+        function newImage()
+        {
+            switch(usingImage)
+            {
+                case 1:
+                    document.getElementById('imge').src="dog.png";
+                    usingImage=2;
+                    break;
+                case 2:
+                document.getElementById('imge').src="monkey.png";
+                    usingImage=3;
+                    break;
+                case 3:
+                document.getElementById('imge').src="rat.png";
+                usingImage=1;
+                    break;
+            }
+        }
+        </script>
+
+        <div class="container">
+            <img src="dog.png" alt="Dog image" height="200" width="200" onclick="newImage()" id="imge">
+        </div>
+
         </script>
     </body>
 </html>
