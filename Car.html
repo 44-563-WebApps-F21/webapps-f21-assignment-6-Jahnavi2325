@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Car Page</title>
+    </head>
+ 
+<body>
+
+<h1>Jahnavi Dammannagari orders a Car</h1>
+
+<form>
+    <input type="checkbox" id="electric" name="car1" value="electric">
+    <label for="electric">electric</label><br>
+
+    <input type="checkbox" id="ac" name="car2" value="ac">
+    <label for="ac">ac</label><br>
+
+    <input type="checkbox" id="gps" name="car3" value="gps">
+    <label for="gps">gps</label><br><br>
+
+    <input type="button" value="Order a car" onclick="orderCar()">
+
+</form>
+
+<p id="result"> Result </p>
+<script> 
+
+    let my_car = new Object();
+    
+    function orderCar()
+    {
+        my_car;
+        electric = document.getElementById("electric").checked;
+        ac = document.getElementById("ac").checked;
+        gps = document.getElementById("gps").checked;
+        
+        out = document.getElementById("result");
+        out.innerHTML = electric+" and "+ac+" and "+gps;
+    }
+    
+    </script>
+
+</body>
+</html> 
