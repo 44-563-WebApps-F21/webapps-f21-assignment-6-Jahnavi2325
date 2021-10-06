@@ -21,6 +21,21 @@
         <p id="result">Result</p>
 
 
+        <form>
+            <input type="radio" id="plus"  value="plus" name="inputs" onclick="processRadio()" >
+            <label for="plus">+</label></br>
+          
+            <input type="radio" id="minus" value="minus" name="inputs" onclick="processRadio()">
+            <label for="minus">-</label></br>
+          
+            <input type="radio" id="times" value="times" name="inputs" onclick="processRadio()">
+            <label for="times">*</label></br>
+              
+            <input type="radio" id="divide"  value="divide" name="inputs" onclick="processRadio()">
+            <label for="divie">/</label></br>
+        </form>
+        <p id="results">Results</p>
+
 
         <script>
             function powers()
@@ -37,6 +52,43 @@
                 out.innerHTML = "powers of "+base+" are: "+result
             }
             
+            function processRadio()
+        {
+            base = document.getElementById("input1").value;
+            exponent = document.getElementById("input2").value;
+
+            pluss = document.getElementById("plus").checked
+            minuss = document.getElementById("minus").checked
+            timess = document.getElementById("times").checked
+            dividee = document.getElementById("divide").checked
+
+            out = document.getElementById("results")
+            if(pluss)
+            {
+                let res = 0;
+                res = Number(base)+Number(exponent);
+                document.getElementById("results").innerHTML="Result after addition of "+base+" and "+exponent+" is " +res;
+            }
+            if(minuss)
+            {
+                let res = 0;
+                res = (base)-(exponent);
+                document.getElementById("results").innerHTML="Result after subtration of "+base+" and "+exponent+" is " +res;
+            }
+            if(timess)
+            {
+                let res = 0;
+                res = (base)*(exponent);
+                document.getElementById("results").innerHTML="Result after multiplication of "+base+" and "+exponent+" is " +res;
+            }
+            if(dividee)
+            {
+                let res = 0;
+                res = (base)/(exponent);
+                document.getElementById("results").innerHTML="Result after division of "+base+" and "+exponent+" is " +res;
+            }
+
+        }
             
             </script>
 
